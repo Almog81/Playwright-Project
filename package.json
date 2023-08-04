@@ -1,0 +1,21 @@
+{
+  "name": "playwright-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Almog81/Playwright-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Almog81/Playwright-Project/issues"
+  },
+  "homepage": "https://github.com/Almog81/Playwright-Project#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.36.2"
+  }
+}
