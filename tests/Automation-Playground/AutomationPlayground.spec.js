@@ -23,8 +23,8 @@ test.describe('Testing Playground', () => {
 
     test.only('Test03: Hidden Layers', async({ page }) => {
         await page.getByRole('link', { name: 'Hidden Layers' }).click();
-        const btn = await page.locator('#greenButton')
-        btn.click();
-        // await expect(btn).
+        const btn = await page.locator('#greenButton');
+        await btn.click();
+        await expect(btn.click()).toThrowError();
     })
 })
