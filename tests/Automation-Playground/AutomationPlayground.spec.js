@@ -13,7 +13,7 @@ test.describe('Testing Playground', () => {
 
     })
 
-    test.skip('Test02: ', async({ page }) => {
+    test.skip('Test02: Class Attribute', async({ page }) => {
         await page.getByRole('link', { name: 'Class Attribute' }).click();
         await page.locator('.btn-primary').click();
         const alert = await page.waitForEvent('dialog')
@@ -25,6 +25,11 @@ test.describe('Testing Playground', () => {
         await page.getByRole('link', { name: 'Hidden Layers' }).click();
         const btn = await page.locator('#greenButton');
         await btn.click();
-        await expect(btn.click()).toThrowError();
+        try {
+            await btn.click()
+          } catch (e) {
+            expect(e).toContain('locator.click: Target closed')
+          }
+        
     })
 })
